@@ -1,0 +1,16 @@
+.user {
+    margin-top: 4px;
+    overflow: hidden;
+    .useid {
+      cursor: pointer;
+    }
+  }
+  .usenum {
+    margin-top: 4px;
+  }
+  .caozuo {
+    display: flex;
+    button {
+      margin: 0 5px;
+    }
+  }

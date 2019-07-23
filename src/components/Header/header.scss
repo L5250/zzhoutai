@@ -1,0 +1,19 @@
+.header{
+    float: right;
+    display: flex;
+    .head-icon{
+        padding: 0 20px;
+    }
+    .header-a{
+        height: 64px;
+        width: 80px;
+        padding: 0 20px;
+        a{
+            width: 40px;
+            height: 40px;
+        }
+    }
+  
+    
+}
+

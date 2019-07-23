@@ -1,0 +1,30 @@
+
+
+.add-main{
+    margin-bottom: 15px;
+    .add-input{
+        display: flex;
+        .input-word{
+            width: 70px;
+            margin-right: 10px;
+            text-align: right;
+            line-height: 35px;
+        }
+    }
+    .add-tree{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        .tree-word{
+            width: 70px;
+            margin-right: 10px;
+            text-align: right;
+        }
+    }
+}
+.add-but{
+    text-align: right;
+    button{
+        margin:5px;
+    }
+}

@@ -1,0 +1,42 @@
+.demo-infinite-container {
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    overflow: auto;
+    padding: 8px 24px;
+    height: 500px;
+  }
+  .demo-loading-container {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+  }
+  .apply,.success,.failed{
+    display: none;
+  }
+
+
+  .title {
+    padding: 16px 32px 1px;
+    background: white;
+    margin-top: 3px;
+    box-sizing: border-box;
+  
+    .ant-page-header-title-view {
+      height: 46px;
+  
+      .title-a {
+        height: 46px;
+        img {
+          width: 28px;
+          height: 28px;
+          border-radius: 5px;
+        }
+        .title-word {
+          padding: 0 15px;
+          display: inline;
+          line-height: 31px;
+        }
+      }
+    }
+  }

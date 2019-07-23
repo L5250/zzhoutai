@@ -1,0 +1,20 @@
+
+    .inp-1,.inp-2{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        span{
+            min-width: 70px;
+            text-align: right;
+            margin-right: 10px;
+        }
+    }
+    .radio{
+        // align-items: center;
+        margin-bottom: 20px;
+        .radio-a{
+            min-width: 70px;
+            text-align: right;
+            margin-right: 10px;
+        }
+    }

@@ -1,0 +1,85 @@
+.page2 {
+  position: relative;
+  width: 100%;
+  .page2-main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .ad{
+      margin: 10px 14px;
+      position: relative;
+      overflow: hidden;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+  .page2-box {
+    width: 230px;
+    height: 100%;
+    overflow: hidden;
+    .mengc {
+      // overflow: hidden;
+      width: 230px;
+      height:100%;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.6);
+      display:flex;
+      align-items: center;
+      transition-duration:  .3s;
+      top: -100%;
+      left: 0;
+      .open-mc {
+        color: #ccc;
+        font-size: 28px;
+        z-index:20;
+        cursor: pointer;
+        position: relative;
+        left:45%;
+      }
+    }
+    &:hover{
+      .mengc {
+        top: 0;
+        // height: 100%;
+      }
+    }
+  }
+}
+
+.page2-boxa {
+  .page2-boxa-a {
+    padding: 10px;
+    .box-time {
+      text-align: right;
+      border-bottom: 1px solid #ebeef5;
+      padding-bottom: 4px;
+    }
+  }
+}
+.page2-boxb {
+  .page2-boxb-b {
+    text-align: right;
+  }
+}
+
+.page2-input,
+.page2-inputa {
+  display: flex;
+  margin-bottom: 10px;
+  span {
+    margin-right: 10px;
+    word-break: keep-all;
+    line-height: 32px;
+  }
+}
+.input-ico ,.input-close{
+  line-height: 32px;
+  padding: 0 12px;
+  cursor: pointer;
+  // text-align: right;
+}
+.page2-inputa{
+  input{
+    width: 150px;
+  }
+}

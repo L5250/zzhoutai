@@ -1,0 +1,29 @@
+#header{
+    box-shadow: 1px 0px 10px #a4a1a1;
+    // width: 200px;
+
+    .login{
+        // width: 200px;
+        height: 64px;
+        text-align: center;
+        line-height: 64px;
+
+
+        .login-img{
+            width:30px;
+            height: 30px;
+            margin-top: -4px;
+        }
+        span{
+            color: rgba(0,0,0,.8);
+            font-size: 22px;
+            font-family: Myriad Pro,Helvetica Neue,Arial,Helvetica,sans-serif;
+            font-weight: 600;
+            padding-left: 6px;
+        }
+        .hide{
+            display: none;
+        }
+    }
+   
+}
