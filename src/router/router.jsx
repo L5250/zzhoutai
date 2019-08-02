@@ -11,6 +11,7 @@ import Page6 from '../pages/page6/page6.jsx';
 import Login from '../pages/Login/login.jsx';
 import Video from '../pages/video/video.jsx';
 import Echarts from '../pages/Echarts/echarts.jsx';
+import Groups from '../pages/ReactTrationsGroups/groups.jsx';
 
 
 export default class Router extends React.Component {
@@ -31,9 +32,7 @@ export default class Router extends React.Component {
                 <Route path = '/login' component={Login}></Route>
                 <Route path ='/video' component={Video}></Route>
                 <Route path ='/echarts' component={Echarts}></Route>
-
-
-
+                <Route path ='/groups' component={Groups}></Route>
 
             </HashRouter>
         )

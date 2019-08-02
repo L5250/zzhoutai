@@ -1,6 +1,9 @@
 import React from 'react';
 import { PageHeader, Button, Table, Divider, Modal } from 'antd';
 import { get } from '../../util/axios'
+import { connect } from 'react-redux';
+// import store  from '../../store/index'
+
 
 const { Column } = Table;
 
@@ -21,15 +24,17 @@ const routes = [
 
 const { confirm } = Modal;
 
-export default class Page3 extends React.Component {
+class Page3 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             // data: JSON.parse(localStorage.getItem("powers")),
             data: [],
-            id:-1
-            
+            id: -1,
+            idc:-1
+
         }
+        // this.state = store.getState();
     }
 
     componentDidMount() {
@@ -71,23 +76,24 @@ export default class Page3 extends React.Component {
             })
         })
     }
-    getId=(index)=>{
+    getId = (index) => {
         let a = this.state.data[index].id
         this.setState({
-            id:a
+            id: a
         })
     }
 
     render() {
         // console.log(window.location.href)
         // console.log(window.location.hash)
+console.log(this.props.id);
 
         return (
             <div>
                 <div className="title">
                     <PageHeader title={
                         <span className="title-a">
-                            <img src={require('../../static/images/lo.png')} alt="" ></img>
+                            <img src={require('../../static/images/lo.png')} alt="" className="title-img"></img>
                             <h3 className="title-word">角色管理</h3>
                         </span>}
                         breadcrumb={{ routes }} className="title-ico"
@@ -117,11 +123,15 @@ export default class Page3 extends React.Component {
 
                                 <span>
 
-                                    <a href={'/#/ff/edit?id=' + this.state.id} onClick={()=>this.getId(index)}>编辑</a>
+                                    <a href={'/#/ff/edit?id=' + this.state.id} onClick={() => this.getId(index)}>编辑</a>
                                     <Divider type="vertical" />
                                     <span style={{ color: "#1890ff", cursor: "pointer" }} onClick={() => this.showDeleteConfirm(index)} >删除</span>
                                     <Divider type="vertical" />
-                                    <a href={'/#/ff/see?id=' + this.state.id} onClick={()=>this.getId(index)}>查看</a>
+                                    <a href={'/#/ff/see?id=' + this.state.id}
+                                        // onClick={() => this.getId(index)}
+                                        // let cc = {this.state.data[index].id}
+                                        onClick={()=>this.props.tackId(index)}
+                                    >查看</a>
                                 </span>
                             )}
                         />
@@ -132,3 +142,28 @@ export default class Page3 extends React.Component {
     }
 
 }
+
+
+// const mapStateToProps = (state) => {
+//     return {
+//         id: state.id
+//     }
+// }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        tackId(index) {
+            this.setState({
+                idc:this.state.data[index].id
+            })
+            let action = {
+                type: "see",
+                idc:this.state.idc
+            }
+            dispatch(action)
+        }
+
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Page3)

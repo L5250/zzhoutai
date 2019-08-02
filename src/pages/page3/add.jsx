@@ -2,6 +2,7 @@ import React from 'react';
 import { PageHeader, Icon, Input, Tree, Button, message } from 'antd';
 import './add.scss';
 import { get, post } from '../../util/axios'
+import { connect } from 'react-redux'
 
 
 // const powers = require('./quanxian.json').data.result

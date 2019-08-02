@@ -39,7 +39,7 @@ export default class Title extends React.Component {
             <div className="title">
                 <PageHeader title={
                     <span className="title-a">
-                        <img src={require('../../static/images/lo.png')} alt="" ></img>
+                        <img src={require('../../static/images/lo.png')} alt="" className="title-img" ></img>
                         <h3 className="title-word">{this.props.data.first}</h3>
                     </span>}
                     breadcrumb={{ routes }} className="title-ico"

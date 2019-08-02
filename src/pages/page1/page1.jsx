@@ -80,7 +80,7 @@ export default class Page1 extends React.Component {
         <div className="title">
           <PageHeader title={
             <span className="title-a">
-              <img src={require('../../static/images/lo.png')} alt="" ></img>
+              <img src={require('../../static/images/lo.png')} alt="" className="title-img"></img>
               <h3 className="title-word">企业认证</h3>
             </span>}
             breadcrumb={{ routes }} className="title-ico"

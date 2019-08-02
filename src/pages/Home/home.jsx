@@ -19,7 +19,7 @@ export default class App extends React.Component {
 
                 }}>
                 <div className="home">
-                    <img src={require('../../static/images/zol2x.png')} alt=""></img>
+                    <img src={require('../../static/images/zol2x.png')} alt="" className="title-img"></img>
                     <span>职卓后台管理系统</span>
                 </div>
             </div>

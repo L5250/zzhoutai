@@ -2,6 +2,7 @@ import React from 'react';
 import { PageHeader, Icon,  Tree  } from 'antd';
 import './add.scss';
 import { get } from '../../util/axios'
+import { connect } from 'react-redux';
 
 
 
@@ -32,7 +33,7 @@ const routes = [
 
 
 
-export default class See extends React.Component {
+class See extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -84,7 +85,8 @@ export default class See extends React.Component {
     getData = () => {
         let a = window.location.hash.slice(12);
 
-        get('/zol-cms/role/detail', { roleId: a }).then(res => {
+        get('/zol-cms/role/detail', { roleId: 4}).then(res => {
+            console.log(res)
             let arr = JSON.parse(res.data.menus)
             for (let i = 0; i < arr.length; i++) {
                 let arr1 = []
@@ -110,7 +112,8 @@ export default class See extends React.Component {
         });
     }
     render() {
-
+        console.log(this.props.id);
+        
         // console.log(window.location.hash)
         return (
             <div>
@@ -172,3 +175,10 @@ export default class See extends React.Component {
     }
 
 }
+
+const mapStateToProps=(state)=>{
+    return {
+        id :state.id
+    }
+}
+export default connect(mapStateToProps,null)(See)

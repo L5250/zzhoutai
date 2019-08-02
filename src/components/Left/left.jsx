@@ -143,7 +143,9 @@ export default class Left extends React.Component {
                                 <span>数据字典</span>
                             </span>
                         }>
-                        <Menu.Item key="11">中介擅长管理</Menu.Item>
+                        <Menu.Item key="11">
+                            <a href="/#/groups" alt="">React动画</a>
+                        </Menu.Item>
                         <Menu.Item key="12">职业分类管理</Menu.Item>
                         <Menu.Item key="13">职位卡管理</Menu.Item>
                         <Menu.Item key="14">特殊账号管理</Menu.Item>

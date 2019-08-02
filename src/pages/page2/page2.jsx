@@ -175,7 +175,7 @@ export default class Page2 extends React.Component {
         <div className="title">
           <PageHeader title={
             <span className="title-a">
-              <img src={require('../../static/images/lo.png')} alt="" ></img>
+              <img src={require('../../static/images/lo.png')} alt="" className="title-img"></img>
               <h3 className="title-word">公司管理</h3>
             </span>}
             breadcrumb={{ routes }} className="title-ico"
